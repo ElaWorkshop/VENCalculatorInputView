@@ -40,4 +40,8 @@
 @property (strong, nonatomic) UIColor *operationButtonBackgroundColor;
 @property (strong, nonatomic) UIColor *operationButtonBorderColor;
 
+@property (nonatomic) BOOL savable;
+
+- (void)toggleSavable:(BOOL)savable;
+
 @end

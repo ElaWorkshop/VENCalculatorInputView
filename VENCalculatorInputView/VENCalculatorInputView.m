@@ -5,6 +5,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *numberButtonCollection;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *operationButtonCollection;
 @property (strong, nonatomic) IBOutlet UIButton *decimalButton;
+@property (nonatomic) IBOutlet UIButton *equalSaveButton;
 
 @end
 
@@ -141,6 +142,16 @@
     _operationButtonBorderColor = operationButtonBorderColor;
     for (UIButton *operationButton in self.operationButtonCollection) {
         operationButton.layer.borderColor = operationButtonBorderColor.CGColor;
+    }
+}
+
+- (void)toggleSavable:(BOOL)savable {
+    self.savable = savable;
+    if (self.savable) {
+        self.equalSaveButton.titleLabel.text = @"✓";
+    }
+    else {
+        self.equalSaveButton.titleLabel.text = @"=";
     }
 }
 
