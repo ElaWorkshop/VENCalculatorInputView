@@ -38,12 +38,11 @@
         NSInteger integerExpression = [(NSNumber *)result integerValue];
         CGFloat floatExpression = [(NSNumber *)result floatValue];
         if (integerExpression == floatExpression) {
-            return [(NSNumber *)result stringValue];
+            return [[self numberFormatter] stringFromNumber:@(integerExpression)];
         } else if (floatExpression >= CGFLOAT_MAX || floatExpression <= CGFLOAT_MIN || isnan(floatExpression)) {
             return @"0";
         } else {
-            NSString *moneyFormattedNumber = [[self numberFormatter] stringFromNumber:@(floatExpression)];
-            return [moneyFormattedNumber stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            return [[self numberFormatter] stringFromNumber:@(floatExpression)];
         }
     } else {
         return nil;
@@ -62,7 +61,7 @@
     if (!_numberFormatter) {
         _numberFormatter = [NSNumberFormatter new];
         [_numberFormatter setLocale:self.locale];
-        [_numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
         [_numberFormatter setCurrencySymbol:@""];
     }
     return _numberFormatter;

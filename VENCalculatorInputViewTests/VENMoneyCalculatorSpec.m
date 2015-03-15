@@ -18,12 +18,12 @@ describe(@"Evaluate expressions", ^{
     it(@"should handle addition", ^{
         expect([moneyCalculator evaluateExpression:@"1+1"]).to.equal(@"2");
         expect([moneyCalculator evaluateExpression:@"1 + 1"]).to.equal(@"2");
-        expect([moneyCalculator evaluateExpression:@"1 + 1000"]).to.equal(@"1001");
+        expect([moneyCalculator evaluateExpression:@"1 + 1000"]).to.equal(@"1,001");
     });
 
     it(@"should handle subtraction", ^{
         expect([moneyCalculator evaluateExpression:@"1-1"]).to.equal(@"0");
-        expect([moneyCalculator evaluateExpression:@"10000-1"]).to.equal(@"9999");
+        expect([moneyCalculator evaluateExpression:@"10000-1"]).to.equal(@"9,999");
         expect([moneyCalculator evaluateExpression:@"0 - 100"]).to.equal(@"-100");
     });
 
@@ -36,7 +36,7 @@ describe(@"Evaluate expressions", ^{
     it(@"should handle division", ^{
         expect([moneyCalculator evaluateExpression:@"2/2"]).to.equal(@"1");
         expect([moneyCalculator evaluateExpression:@"100/4"]).to.equal(@"25");
-        expect([moneyCalculator evaluateExpression:@"1/2"]).to.equal(@"0.50");
+        expect([moneyCalculator evaluateExpression:@"1/2"]).to.equal(@"0.5");
     });
 
     it(@"should return nil for invalid expressions", ^{
@@ -48,7 +48,7 @@ describe(@"Evaluate expressions", ^{
 
     it(@"should handle − (longer dash)", ^{
         expect([moneyCalculator evaluateExpression:@"1−1"]).to.equal(@"0");
-        expect([moneyCalculator evaluateExpression:@"10000−1"]).to.equal(@"9999");
+        expect([moneyCalculator evaluateExpression:@"10000−1"]).to.equal(@"9,999");
         expect([moneyCalculator evaluateExpression:@"0 − 100"]).to.equal(@"-100");
     });
 
@@ -61,7 +61,7 @@ describe(@"Evaluate expressions", ^{
     it(@"should handle ÷", ^{
         expect([moneyCalculator evaluateExpression:@"2÷2"]).to.equal(@"1");
         expect([moneyCalculator evaluateExpression:@"100÷4"]).to.equal(@"25");
-        expect([moneyCalculator evaluateExpression:@"1÷2"]).to.equal(@"0.50");
+        expect([moneyCalculator evaluateExpression:@"1÷2"]).to.equal(@"0.5");
     });
 
     it(@"should handle ÷ 0", ^{
@@ -85,7 +85,7 @@ describe(@"Handle other locale", ^{
     it(@"should handle division", ^{
         expect([moneyCalculator evaluateExpression:@"2/2"]).to.equal(@"1");
         expect([moneyCalculator evaluateExpression:@"100/4"]).to.equal(@"25");
-        expect([moneyCalculator evaluateExpression:@"1/2"]).to.equal(@"0,50");
+        expect([moneyCalculator evaluateExpression:@"1/2"]).to.equal(@"0,5");
     });
 
     it(@"should handle ×", ^{
@@ -106,7 +106,7 @@ describe(@"Handle Deutsch, which use . as grouping seperator", ^{
     it(@"should handle division", ^{
         expect([moneyCalculator evaluateExpression:@"2/2"]).to.equal(@"1");
         expect([moneyCalculator evaluateExpression:@"100/4"]).to.equal(@"25");
-        expect([moneyCalculator evaluateExpression:@"1/2"]).to.equal(@"0,50");
+        expect([moneyCalculator evaluateExpression:@"1/2"]).to.equal(@"0,5");
     });
 
     it(@"should handle ×", ^{
@@ -117,6 +117,10 @@ describe(@"Handle Deutsch, which use . as grouping seperator", ^{
     it(@"should handle big numbers", ^{
         expect([moneyCalculator evaluateExpression:@"1.035,01+40"]).to.equal(@"1.075,01");
         expect([moneyCalculator evaluateExpression:@"1.040,01-1.035"]).to.equal(@"5,01");
+    });
+
+    it(@"should handle big integer numbers", ^{
+        expect([moneyCalculator evaluateExpression:@"1.000+2.000"]).to.equal(@"3.000");
     });
 
 });
