@@ -6,7 +6,7 @@
 @optional
 - (void)calculatorInputView:(VENCalculatorInputView *)inputView didTapKey:(NSString *)key;
 - (void)calculatorInputViewDidTapBackspace:(VENCalculatorInputView *)calculatorInputView;
-
+- (void)calculatorInputViewDidTapSave:(VENCalculatorInputView *)calculatorInputView;
 @end
 
 @interface VENCalculatorInputView : UIView <UIInputViewAudioFeedback>

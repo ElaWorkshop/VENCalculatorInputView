@@ -55,7 +55,12 @@
 
 - (IBAction)userDidTapKey:(UIButton *)sender {
     [[UIDevice currentDevice] playInputClick];
-    if ([self.delegate respondsToSelector:@selector(calculatorInputView:didTapKey:)]) {
+    if (self.savable && [sender isEqual:self.equalSaveButton]) {
+        if ([self.delegate respondsToSelector:@selector(calculatorInputViewDidTapSave:)]) {
+            [self.delegate calculatorInputViewDidTapSave:self];
+        }
+    }
+    else if ([self.delegate respondsToSelector:@selector(calculatorInputView:didTapKey:)]) {
         [self.delegate calculatorInputView:self didTapKey:sender.titleLabel.text];
     }
 }
