@@ -63,6 +63,8 @@
         [_numberFormatter setLocale:self.locale];
         [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
         [_numberFormatter setCurrencySymbol:@""];
+        [_numberFormatter setMaximumFractionDigits:2];
+        [_numberFormatter setRoundingMode:NSNumberFormatterRoundUp];
     }
     return _numberFormatter;
 }
