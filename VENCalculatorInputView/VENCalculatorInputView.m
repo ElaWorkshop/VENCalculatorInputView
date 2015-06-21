@@ -153,10 +153,11 @@
 - (void)toggleSavable:(BOOL)savable {
     self.savable = savable;
     if (self.savable) {
-        self.equalSaveButton.titleLabel.text = @"✓";
+        self.equalSaveButton.titleLabel.hidden = YES;
+        self.equalSaveButton.imageView.image = [UIImage imageNamed:@"check"];
     }
     else {
-        self.equalSaveButton.titleLabel.text = @"=";
+        self.equalSaveButton.titleLabel.hidden = NO;
     }
 }
 
