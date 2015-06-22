@@ -32,6 +32,9 @@
         for (UIButton *operationButton in self.operationButtonCollection) {
             [self setupButton:operationButton];
         }
+
+        [self.equalSaveButton setImage:[UIImage imageNamed:@"check"] forState:UIControlStateSelected];
+        [self.equalSaveButton setTitle:@"" forState:UIControlStateSelected];
     }
     return self;
 }
@@ -153,11 +156,10 @@
 - (void)toggleSavable:(BOOL)savable {
     self.savable = savable;
     if (self.savable) {
-        self.equalSaveButton.titleLabel.hidden = YES;
-        self.equalSaveButton.imageView.image = [UIImage imageNamed:@"check"];
+        [self.equalSaveButton setSelected:YES];
     }
     else {
-        self.equalSaveButton.titleLabel.hidden = NO;
+        [self.equalSaveButton setSelected:NO];
     }
 }
 
