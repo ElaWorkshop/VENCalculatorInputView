@@ -11,9 +11,6 @@
 		2F74D09D196F533B0040C816 /* UITextField+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74D09C196F533B0040C816 /* UITextField+VENCalculatorInputView.m */; };
 		2F74D09F196F53E20040C816 /* UITextField+VENCalculatorInputViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74D09E196F53E20040C816 /* UITextField+VENCalculatorInputViewSpec.m */; };
 		40BED60EE864401D8AFB2433 /* libPods-VENCalculatorInputViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142758DF9FEC443BA2D635DE /* libPods-VENCalculatorInputViewTests.a */; };
-		4F4C29EA1B37226F006B5750 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C29E71B37226F006B5750 /* check.png */; };
-		4F4C29EB1B37226F006B5750 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C29E81B37226F006B5750 /* check@2x.png */; };
-		4F4C29EC1B37226F006B5750 /* check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C29E91B37226F006B5750 /* check@3x.png */; };
 		B6F22CFD18AC031100543816 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F22CFC18AC031100543816 /* Foundation.framework */; };
 		B6F22D0C18AC031100543816 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F22CFC18AC031100543816 /* Foundation.framework */; };
 		B6F22D1118AC031100543816 /* libVENCalculatorInputView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F22CF918AC031100543816 /* libVENCalculatorInputView.a */; };
@@ -196,9 +193,6 @@
 		B6F22D3118AC03C700543816 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4F4C29E71B37226F006B5750 /* check.png */,
-				4F4C29E81B37226F006B5750 /* check@2x.png */,
-				4F4C29E91B37226F006B5750 /* check@3x.png */,
 				B6F22D3218AC03C700543816 /* VENCalculatorIconBackspace.png */,
 				B6F22D3318AC03C700543816 /* VENCalculatorIconBackspace@2x.png */,
 				1AA4581A1B33ED8400708FFE /* VENCalculatorIconBackspace@3x.png */,
@@ -252,7 +246,7 @@
 		B6F22CF118AC031000543816 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Venmo;
 			};
 			buildConfigurationList = B6F22CF418AC031000543816 /* Build configuration list for PBXProject "VENCalculatorInputView" */;
@@ -369,7 +363,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -407,7 +400,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -463,7 +455,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 382246DCE4C0E18FFC29538F /* Pods-VENCalculatorInputViewTests.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -485,7 +476,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA38E94872D6B1E128555B04 /* Pods-VENCalculatorInputViewTests.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
