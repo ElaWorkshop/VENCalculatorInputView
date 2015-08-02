@@ -153,10 +153,14 @@
 - (void)toggleSavable:(BOOL)savable {
     self.savable = savable;
     if (self.savable) {
-        [self.equalSaveButton setImage:[UIImage imageNamed:@"check"] forState:UIControlStateNormal];
+        self.equalSaveButton.backgroundColor = [UIColor colorWithRed:0.48 green:0.84 blue:0 alpha:1];
+        self.equalSaveButton.tintColor = [UIColor whiteColor];
+        UIImage *checkImage = [[UIImage imageNamed:@"check"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [self.equalSaveButton setImage:checkImage forState:UIControlStateNormal];
         [self.equalSaveButton setTitle:nil forState:UIControlStateNormal];
     }
     else {
+        self.equalSaveButton.backgroundColor = [UIColor colorWithRed:0.76 green:0.77 blue:0.78 alpha:1];
         [self.equalSaveButton setImage:nil forState:UIControlStateNormal];
         [self.equalSaveButton setTitle:@"=" forState:UIControlStateNormal];
     }
