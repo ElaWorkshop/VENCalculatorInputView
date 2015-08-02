@@ -19,10 +19,11 @@
 
         // Set customizable properties
         [self setNumberButtonBackgroundColor:[UIColor colorWithWhite:0.98828 alpha:1]];
-        [self setNumberButtonBorderColor:[UIColor colorWithRed:193/255.0f green:195/255.0f blue:199/255.0f alpha:1]];
-        [self setOperationButtonBackgroundColor:[UIColor colorWithRed:193/255.0f green:196/255.0f blue:200/255.0f alpha:1]];
-        [self setOperationButtonBorderColor:[UIColor colorWithRed:172/255.0f green:174/255.0f blue:177/255.0f alpha:1]];
-        [self setButtonHighlightedColor:[UIColor grayColor]];
+        [self setNumberButtonBorderColor:[UIColor colorWithWhite:0.75 alpha:1]];
+        [self setNumberButtonHighlightedColor:[UIColor colorWithRed:0.82 green:0.84 blue:0.86 alpha:1]];
+        [self setOperationButtonBackgroundColor:[UIColor colorWithRed:0.82 green:0.84 blue:0.86 alpha:1]];
+        [self setOperationButtonBorderColor:[UIColor colorWithWhite:0.65 alpha:1]];
+        [self setOperationButtonHighlightedColor:[UIColor whiteColor]];
         [self setButtonTitleColor:[UIColor darkTextColor]];
 
         // Set default properties
@@ -110,18 +111,6 @@
     }
 }
 
-- (void)setButtonHighlightedColor:(UIColor *)buttonHighlightedColor {
-    _buttonHighlightedColor = buttonHighlightedColor;
-    for (UIButton *numberButton in self.numberButtonCollection) {
-        [numberButton setBackgroundImage:[self imageWithColor:buttonHighlightedColor size:CGSizeMake(50, 50)]
-                                forState:UIControlStateHighlighted];
-    }
-    for (UIButton *operationButton in self.operationButtonCollection) {
-        [operationButton setBackgroundImage:[self imageWithColor:buttonHighlightedColor size:CGSizeMake(50, 50)]
-                                   forState:UIControlStateHighlighted];
-    }
-}
-
 - (void)setNumberButtonBackgroundColor:(UIColor *)numberButtonBackgroundColor {
     _numberButtonBackgroundColor = numberButtonBackgroundColor;
     for (UIButton *numberButton in self.numberButtonCollection) {
@@ -133,6 +122,14 @@
     _numberButtonBorderColor = numberButtonBorderColor;
     for (UIButton *numberButton in self.numberButtonCollection) {
         numberButton.layer.borderColor = numberButtonBorderColor.CGColor;
+    }
+}
+
+- (void)setNumberButtonHighlightedColor:(UIColor *)buttonHighlightedColor {
+    _numberButtonHighlightedColor = buttonHighlightedColor;
+    for (UIButton *numberButton in self.numberButtonCollection) {
+        [numberButton setBackgroundImage:[self imageWithColor:buttonHighlightedColor size:CGSizeMake(50, 50)]
+                                forState:UIControlStateHighlighted];
     }
 }
 
@@ -150,6 +147,14 @@
     }
 }
 
+- (void)setOperationButtonHighlightedColor:(UIColor *)buttonHighlightedColor {
+    _operationButtonHighlightedColor = buttonHighlightedColor;
+    for (UIButton *operationButton in self.operationButtonCollection) {
+        [operationButton setBackgroundImage:[self imageWithColor:buttonHighlightedColor size:CGSizeMake(50, 50)]
+                                   forState:UIControlStateHighlighted];
+    }
+}
+
 - (void)toggleSavable:(BOOL)savable {
     self.savable = savable;
     if (self.savable) {
@@ -157,11 +162,17 @@
         self.equalSaveButton.tintColor = [UIColor whiteColor];
         UIImage *checkImage = [[UIImage imageNamed:@"check"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [self.equalSaveButton setImage:checkImage forState:UIControlStateNormal];
+        [self.equalSaveButton setImage:checkImage forState:UIControlStateHighlighted];
+        [self.equalSaveButton setBackgroundImage:[self imageWithColor:[UIColor colorWithRed:0.62 green:0.89 blue:0.32 alpha:1] size:CGSizeMake(50, 50)]
+                                        forState:UIControlStateHighlighted];
         [self.equalSaveButton setTitle:nil forState:UIControlStateNormal];
     }
     else {
-        self.equalSaveButton.backgroundColor = [UIColor colorWithRed:0.76 green:0.77 blue:0.78 alpha:1];
+        self.equalSaveButton.backgroundColor = self.operationButtonBackgroundColor;
         [self.equalSaveButton setImage:nil forState:UIControlStateNormal];
+        [self.equalSaveButton setImage:nil forState:UIControlStateHighlighted];
+        [self.equalSaveButton setBackgroundImage:[self imageWithColor:self.operationButtonHighlightedColor size:CGSizeMake(50, 50)]
+                                        forState:UIControlStateHighlighted];
         [self.equalSaveButton setTitle:@"=" forState:UIControlStateNormal];
     }
 }

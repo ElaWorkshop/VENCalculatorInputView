@@ -32,13 +32,14 @@
 
 @property (strong, nonatomic) UIColor *buttonTitleColor;
 @property (strong, nonatomic) UIFont  *buttonTitleFont;
-@property (strong, nonatomic) UIColor *buttonHighlightedColor;
 
 @property (strong, nonatomic) UIColor *numberButtonBackgroundColor;
 @property (strong, nonatomic) UIColor *numberButtonBorderColor;
+@property (strong, nonatomic) UIColor *numberButtonHighlightedColor;
 
 @property (strong, nonatomic) UIColor *operationButtonBackgroundColor;
 @property (strong, nonatomic) UIColor *operationButtonBorderColor;
+@property (strong, nonatomic) UIColor *operationButtonHighlightedColor;
 
 @property (nonatomic) BOOL savable;
 
