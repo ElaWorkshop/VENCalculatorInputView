@@ -160,7 +160,8 @@
     if (self.savable) {
         self.equalSaveButton.backgroundColor = [UIColor colorWithRed:0.48 green:0.84 blue:0 alpha:1];
         self.equalSaveButton.tintColor = [UIColor whiteColor];
-        UIImage *checkImage = [[UIImage imageNamed:@"check"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        UIImage *checkImage = [UIImage imageNamed:@"check" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
+        checkImage = [checkImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [self.equalSaveButton setImage:checkImage forState:UIControlStateNormal];
         [self.equalSaveButton setImage:checkImage forState:UIControlStateHighlighted];
         [self.equalSaveButton setBackgroundImage:[self imageWithColor:[UIColor colorWithRed:0.62 green:0.89 blue:0.32 alpha:1] size:CGSizeMake(50, 50)]
