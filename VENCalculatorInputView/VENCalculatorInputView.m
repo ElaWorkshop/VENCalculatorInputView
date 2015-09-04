@@ -158,7 +158,7 @@
 - (void)toggleSavable:(BOOL)savable {
     self.savable = savable;
     if (self.savable) {
-        self.equalSaveButton.backgroundColor = [UIColor colorWithRed:0.48 green:0.84 blue:0 alpha:1];
+        self.equalSaveButton.backgroundColor = [UIColor colorWithRed:0.56 green:0.82 blue:0.14 alpha:1];
         self.equalSaveButton.tintColor = [UIColor whiteColor];
         UIImage *checkImage = [UIImage imageNamed:@"check" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
         checkImage = [checkImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
