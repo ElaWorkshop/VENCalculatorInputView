@@ -4,7 +4,7 @@
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *numberButtonCollection;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *operationButtonCollection;
-@property (strong, nonatomic) IBOutlet UIButton *decimalButton;
+
 @property (nonatomic) IBOutlet UIButton *equalSaveButton;
 
 @end

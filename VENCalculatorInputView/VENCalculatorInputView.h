@@ -41,6 +41,8 @@
 @property (strong, nonatomic) UIColor *operationButtonBorderColor;
 @property (strong, nonatomic) UIColor *operationButtonHighlightedColor;
 
+@property (strong, nonatomic) IBOutlet UIButton *decimalButton;
+
 @property (nonatomic) BOOL savable;
 
 - (void)toggleSavable:(BOOL)savable;
