@@ -16,37 +16,53 @@
 }
 
 - (NSString *)evaluateExpression:(NSString *)expressionString {
+    static NSCharacterSet *ops;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        ops = [NSCharacterSet characterSetWithCharactersInString:@"+-/*"];
+    });
+    
     if (!expressionString) {
         return nil;
     }
     NSString *sanitizedString = [self sanitizedString:expressionString];
-    NSString *floatString = [NSString stringWithFormat:@"1.0*%@", sanitizedString];
-    NSExpression *expression;
-    id result;
-    @try {
-        expression = [NSExpression expressionWithFormat:floatString];
-        result = [expression expressionValueWithObject:nil context:nil];
+    NSRange opRange = [sanitizedString rangeOfCharacterFromSet:ops];
+    if (opRange.location == NSNotFound) {
+        // Simply a number, return as is
+        return sanitizedString;
     }
-    @catch (NSException *exception) {
-        if ([[exception name] isEqualToString:NSInvalidArgumentException]) {
-            return nil;
-        } else {
-            [exception raise];
-        }
-    }
-    if ([result isKindOfClass:[NSNumber class]]) {
-        NSInteger integerExpression = [(NSNumber *)result integerValue];
-        CGFloat floatExpression = [(NSNumber *)result floatValue];
-        if (integerExpression == floatExpression) {
-            return [[self numberFormatter] stringFromNumber:@(integerExpression)];
-        } else if (floatExpression >= CGFLOAT_MAX || floatExpression <= CGFLOAT_MIN || isnan(floatExpression)) {
-            return @"0";
-        } else {
-            return [[self numberFormatter] stringFromNumber:@(floatExpression)];
-        }
-    } else {
+
+    // We can guarantee such expression only have 1 op inside, simply switch on the op
+    NSString *op = [sanitizedString substringWithRange:opRange];
+    NSArray *nums = [sanitizedString componentsSeparatedByCharactersInSet:ops];
+    if ([nums count] != 2) {
         return nil;
     }
+    NSDecimalNumber *num1 = [NSDecimalNumber decimalNumberWithString:nums[0]];
+    NSDecimalNumber *num2 = [NSDecimalNumber decimalNumberWithString:nums[1]];
+    NSDecimalNumber *result;
+    @try {
+        if ([op isEqualToString:@"+"]) {
+            result = [num1 decimalNumberByAdding:num2];
+        }
+        else if ([op isEqualToString:@"-"]) {
+            result = [num1 decimalNumberBySubtracting:num2];
+        }
+        else if ([op isEqualToString:@"/"]) {
+            if ([num2 isEqualToValue:[NSDecimalNumber zero]]) {
+                return @"0";
+            }
+            result = [num1 decimalNumberByDividingBy:num2];
+        }
+        else if ([op isEqualToString:@"*"]) {
+            result = [num1 decimalNumberByMultiplyingBy:num2];
+        }
+    }
+    @catch (NSException *exception) {
+        return nil;
+    }
+
+    return [[self numberFormatter] stringFromNumber:result];
 }
 
 - (void)setLocale:(NSLocale *)locale {

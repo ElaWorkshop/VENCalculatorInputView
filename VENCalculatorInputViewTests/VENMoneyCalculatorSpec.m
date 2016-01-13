@@ -67,8 +67,10 @@ describe(@"Evaluate expressions", ^{
     it(@"should handle ÷ 0", ^{
         expect([moneyCalculator evaluateExpression:@"2÷0"]).to.equal(@"0");
         expect([moneyCalculator evaluateExpression:@"0÷0"]).to.equal(@"0");
-        expect([moneyCalculator evaluateExpression:@"-2÷0"]).to.equal(@"0");
-        expect([moneyCalculator evaluateExpression:@"-0÷0"]).to.equal(@"0");
+    });
+
+    it(@"should handle really big numbers", ^{
+        expect([moneyCalculator evaluateExpression:@"1000000×1000000"]).to.equal(@"1,000,000,000,000");
     });
 
 });
@@ -140,14 +142,14 @@ describe(@"locale", ^{
     });
 
     it(@"should use the current locale by default (Vietname in this case)", ^{
-        expect([moneyCalculator evaluateExpression:@"1,90"]).to.equal(@"2");
-        expect([moneyCalculator evaluateExpression:@"1,30"]).to.equal(@"1");
-        expect([moneyCalculator evaluateExpression:@"0,90"]).to.equal(@"1");
+        expect([moneyCalculator evaluateExpression:@"1,90"]).to.equal(@"1.90");
+        expect([moneyCalculator evaluateExpression:@"1,30"]).to.equal(@"1.30");
+        expect([moneyCalculator evaluateExpression:@"0,90"]).to.equal(@"0.90");
     });
 
     it(@"should use the specified locale if set", ^{
         moneyCalculator.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
-        expect([moneyCalculator evaluateExpression:@"1.9"]).to.equal(@"1.90");
+        expect([moneyCalculator evaluateExpression:@"1.9"]).to.equal(@"1.9");
         expect([moneyCalculator evaluateExpression:@"1.30"]).to.equal(@"1.30");
         expect([moneyCalculator evaluateExpression:@"0.90"]).to.equal(@"0.90");
     });
