@@ -1,22 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1" customClass="VENCalculatorInputView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x27-vp-6DR">
                     <rect key="frame" x="0.0" y="0.0" width="59" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Divide"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="÷">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="2lI-PU-xC5"/>
@@ -27,7 +32,7 @@
                     <accessibility key="accessibilityConfiguration" label="One"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="1">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="wju-cY-KVJ"/>
@@ -38,7 +43,7 @@
                     <accessibility key="accessibilityConfiguration" label="Four"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="4">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="vqD-gt-D5D"/>
@@ -49,7 +54,7 @@
                     <accessibility key="accessibilityConfiguration" label="Seven"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="7">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="YfT-3z-pVt"/>
@@ -60,7 +65,7 @@
                     <accessibility key="accessibilityConfiguration" label="Decimal point"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title=".">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="QWQ-qv-HHB"/>
@@ -71,7 +76,7 @@
                     <accessibility key="accessibilityConfiguration" label="Two"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="2">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="veB-xt-rnr"/>
@@ -82,7 +87,7 @@
                     <accessibility key="accessibilityConfiguration" label="Five"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="5">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="EyB-jX-8Ci"/>
@@ -93,7 +98,7 @@
                     <accessibility key="accessibilityConfiguration" label="Eight"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="8">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="W7z-SU-2Bb"/>
@@ -104,7 +109,7 @@
                     <accessibility key="accessibilityConfiguration" label="Zero"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="0">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="jh0-Bu-kbn"/>
@@ -115,7 +120,7 @@
                     <accessibility key="accessibilityConfiguration" label="Three"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="3">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="hHt-S1-qaK"/>
@@ -126,7 +131,7 @@
                     <accessibility key="accessibilityConfiguration" label="Six"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="6">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="2hq-ih-7qk"/>
@@ -137,7 +142,7 @@
                     <accessibility key="accessibilityConfiguration" label="Backspace"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" image="VENCalculatorIconBackspace.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapBackspace:" destination="1" eventType="touchUpInside" id="Kyu-1V-QyI"/>
@@ -148,7 +153,7 @@
                     <accessibility key="accessibilityConfiguration" label="Multiply"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="×">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="9jH-Sx-3A5"/>
@@ -159,7 +164,7 @@
                     <accessibility key="accessibilityConfiguration" label="Subtract"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="−">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="Ri3-Vn-C6b"/>
@@ -170,7 +175,7 @@
                     <accessibility key="accessibilityConfiguration" label="Add"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="+">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="8B7-FJ-aLh"/>
@@ -181,19 +186,19 @@
                     <accessibility key="accessibilityConfiguration" label="Nine"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <state key="normal" title="9">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="userDidTapKey:" destination="1" eventType="touchUpInside" id="nBV-ta-bQu"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="K9B-4z-Rq4" firstAttribute="top" secondItem="1" secondAttribute="top" id="0aG-0V-nbU"/>
                 <constraint firstItem="x27-vp-6DR" firstAttribute="top" secondItem="1" secondAttribute="top" id="0hI-dQ-Yua"/>
                 <constraint firstItem="x27-vp-6DR" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="1zq-D3-xri"/>
-                <constraint firstAttribute="bottom" secondItem="WE3-xD-kgf" secondAttribute="bottom" id="4W6-NC-MI4"/>
+                <constraint firstAttribute="bottomMargin" secondItem="WE3-xD-kgf" secondAttribute="bottom" id="4W6-NC-MI4"/>
                 <constraint firstItem="eYd-gM-or0" firstAttribute="leading" secondItem="WE3-xD-kgf" secondAttribute="trailing" id="5GF-vF-W6i"/>
                 <constraint firstAttribute="trailing" secondItem="ZMP-0C-Anz" secondAttribute="trailing" id="5b6-5X-KBE"/>
                 <constraint firstItem="i9h-WF-taO" firstAttribute="top" secondItem="BZC-sL-jHO" secondAttribute="bottom" id="6WH-Ic-Q7R"/>
@@ -224,6 +229,7 @@
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="height" secondItem="ZMP-0C-Anz" secondAttribute="height" id="Qcj-xV-qXn"/>
                 <constraint firstItem="xVG-Mb-OFf" firstAttribute="top" secondItem="nS1-xf-Wd3" secondAttribute="bottom" id="Shh-HK-B2r"/>
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="top" secondItem="ZMP-0C-Anz" secondAttribute="bottom" id="VfG-Tv-PG1"/>
+                <constraint firstItem="eYd-gM-or0" firstAttribute="bottom" secondItem="WE3-xD-kgf" secondAttribute="bottom" id="W8c-gt-TCn"/>
                 <constraint firstItem="x27-vp-6DR" firstAttribute="width" secondItem="fUR-3U-wcK" secondAttribute="width" multiplier="59:87" id="WNW-Wv-PhX"/>
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="width" secondItem="fUR-3U-wcK" secondAttribute="width" id="Y9T-Rf-Eth"/>
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="width" secondItem="eYd-gM-or0" secondAttribute="width" id="YCa-dD-nKM"/>
@@ -238,10 +244,9 @@
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="width" secondItem="i9h-WF-taO" secondAttribute="width" id="eMq-4H-6ox"/>
                 <constraint firstItem="2Ty-om-JCT" firstAttribute="leading" secondItem="eYd-gM-or0" secondAttribute="trailing" id="eWf-He-GIQ"/>
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="width" secondItem="jYZ-Lf-J5j" secondAttribute="width" id="fJX-BW-jA3"/>
+                <constraint firstItem="2Ty-om-JCT" firstAttribute="bottom" secondItem="eYd-gM-or0" secondAttribute="bottom" id="fue-pE-d1k"/>
                 <constraint firstItem="2Ty-om-JCT" firstAttribute="top" secondItem="i9h-WF-taO" secondAttribute="bottom" id="gMi-xC-yDo"/>
                 <constraint firstItem="Wf7-xV-pka" firstAttribute="leading" secondItem="fUR-3U-wcK" secondAttribute="trailing" id="gax-7O-o2i"/>
-                <constraint firstAttribute="bottom" secondItem="eYd-gM-or0" secondAttribute="bottom" id="hEo-eE-Pay"/>
-                <constraint firstAttribute="bottom" secondItem="2Ty-om-JCT" secondAttribute="bottom" id="hJ7-C8-W0y"/>
                 <constraint firstItem="BZC-sL-jHO" firstAttribute="leading" secondItem="JV6-sY-Ogr" secondAttribute="trailing" id="jOS-cf-9Rn"/>
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="height" secondItem="eYd-gM-or0" secondAttribute="height" id="kM7-G0-PcB"/>
                 <constraint firstItem="WJe-DO-RoA" firstAttribute="height" secondItem="fUR-3U-wcK" secondAttribute="height" id="ka8-cg-Zcx"/>
@@ -290,11 +295,6 @@
         </view>
     </objects>
     <resources>
-        <image name="VENCalculatorIconBackspace.png" width="25" height="26"/>
+        <image name="VENCalculatorIconBackspace.png" width="22" height="16"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
