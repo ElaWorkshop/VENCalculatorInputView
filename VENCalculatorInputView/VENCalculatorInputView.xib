@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +15,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x27-vp-6DR">
                     <rect key="frame" x="0.0" y="0.0" width="59" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Divide"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="÷">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -30,7 +26,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-3U-wcK">
                     <rect key="frame" x="59" y="0.0" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="One"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="1">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -41,7 +37,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV6-sY-Ogr">
                     <rect key="frame" x="59" y="54" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Four"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="4">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -52,7 +48,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYZ-Lf-J5j">
                     <rect key="frame" x="59" y="108" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Seven"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="7">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -63,7 +59,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-gM-or0">
                     <rect key="frame" x="59" y="162" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Decimal point"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title=".">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -74,7 +70,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf7-xV-pka">
                     <rect key="frame" x="146" y="0.0" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Two"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="2">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -85,7 +81,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZC-sL-jHO">
                     <rect key="frame" x="146" y="54" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Five"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="5">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -96,7 +92,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9h-WF-taO">
                     <rect key="frame" x="146" y="108" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Eight"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="8">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -107,7 +103,7 @@
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-om-JCT">
                     <rect key="frame" x="146" y="162" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Zero"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="0">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -118,7 +114,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-4z-Rq4">
                     <rect key="frame" x="233" y="0.0" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Three"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="3">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -129,7 +125,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMP-0C-Anz">
                     <rect key="frame" x="233" y="54" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Six"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="6">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -140,7 +136,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjs-Bi-wiF">
                     <rect key="frame" x="233" y="162" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Backspace"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" image="VENCalculatorIconBackspace.png">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -151,7 +147,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nS1-xf-Wd3">
                     <rect key="frame" x="0.0" y="54" width="59" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Multiply"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="×">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -162,7 +158,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-Mb-OFf">
                     <rect key="frame" x="0.0" y="108" width="59" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Subtract"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="−">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -173,7 +169,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE3-xD-kgf">
                     <rect key="frame" x="0.0" y="162" width="59" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Add"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="+">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -184,7 +180,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJe-DO-RoA">
                     <rect key="frame" x="233" y="108" width="87" height="54"/>
                     <accessibility key="accessibilityConfiguration" label="Nine"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                     <state key="normal" title="9">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -292,6 +288,7 @@
                 <outletCollection property="operationButtonCollection" destination="eYd-gM-or0" id="Pcu-vP-N1v"/>
                 <outletCollection property="operationButtonCollection" destination="Vjs-Bi-wiF" id="Ali-RS-13G"/>
             </connections>
+            <point key="canvasLocation" x="86" y="139"/>
         </view>
     </objects>
     <resources>
