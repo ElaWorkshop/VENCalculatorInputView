@@ -15,9 +15,6 @@
     self = [super initWithFrame:frame];
     self = [[[NSBundle bundleForClass:[self class]]  loadNibNamed:@"VENCalculatorInputView" owner:self options:nil] firstObject];
     if (self) {
-        // Set default locale
-        self.locale = [NSLocale currentLocale];
-
         // Set customizable properties
         [self setNumberButtonBackgroundColor:[UIColor colorWithWhite:0.98828 alpha:1]];
         [self setNumberButtonBorderColor:[UIColor colorWithWhite:0.75 alpha:1]];
@@ -34,14 +31,11 @@
         for (UIButton *operationButton in self.operationButtonCollection) {
             [self setupButton:operationButton];
         }
+        
+        NSString *decimalSymbol = [NSNumberFormatter new].decimalSeparator;
+        [self.decimalButton setTitle:decimalSymbol forState:UIControlStateNormal];
     }
     return self;
-}
-
-- (void)setLocale:(NSLocale *)locale {
-    _locale = locale;
-    NSString *decimalSymbol = [locale objectForKey:NSLocaleDecimalSeparator];
-    [self.decimalButton setTitle:decimalSymbol forState:UIControlStateNormal];
 }
 
 - (void)setupButton:(UIButton *)button {

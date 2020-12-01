@@ -10,7 +10,6 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.locale = [NSLocale currentLocale];
     }
     return self;
 }
@@ -65,18 +64,11 @@
     return [[self numberFormatter] stringFromNumber:result];
 }
 
-- (void)setLocale:(NSLocale *)locale {
-    _locale = locale;
-    self.numberFormatter.locale = locale;
-}
-
-
 #pragma mark - Private
 
 - (NSNumberFormatter *)numberFormatter {
     if (!_numberFormatter) {
         _numberFormatter = [NSNumberFormatter new];
-        [_numberFormatter setLocale:self.locale];
         [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
         [_numberFormatter setCurrencySymbol:@""];
         [_numberFormatter setMaximumFractionDigits:2];
@@ -85,7 +77,7 @@
 }
 
 - (NSString *)sanitizedString:(NSString *)string {
-    NSString *groupingSeperator = [self.locale objectForKey:NSLocaleGroupingSeparator];
+    NSString *groupingSeperator = self.numberFormatter.groupingSeparator;
     NSString *withoutGroupingSeperator = [string stringByReplacingOccurrencesOfString:groupingSeperator withString:@""];
     return [[self replaceOperandsInString:withoutGroupingSeperator] stringByReplacingCharactersInSet:[self illegalCharacters] withString:@""];
 }
@@ -103,7 +95,7 @@
 }
 
 - (NSString *)decimalSeparator {
-    return [self.locale objectForKey:NSLocaleDecimalSeparator];
+    return self.numberFormatter.decimalSeparator;
 }
 
 @end

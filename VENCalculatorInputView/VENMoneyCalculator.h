@@ -2,8 +2,6 @@
 
 @interface VENMoneyCalculator : NSObject
 
-@property (strong, nonatomic) NSLocale *locale;
-
 /**
  * Evaluates a mathematical expression containing +, −, ×, and ÷.
  * @param expression The expression to evaluate

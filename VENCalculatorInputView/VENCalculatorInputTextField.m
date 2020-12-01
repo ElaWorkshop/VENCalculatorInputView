@@ -21,28 +21,14 @@
 }
 
 - (void)setUpInit {
-    self.locale = [NSLocale currentLocale];
-
     VENCalculatorInputView *inputView = [VENCalculatorInputView new];
     inputView.delegate = self;
-    inputView.locale = self.locale;
     self.inputView = inputView;
 
     VENMoneyCalculator *moneyCalculator = [VENMoneyCalculator new];
-    moneyCalculator.locale = self.locale;
     self.moneyCalculator = moneyCalculator;
 
     [self addTarget:self action:@selector(venCalculatorTextFieldDidEndEditing) forControlEvents:UIControlEventEditingDidEnd];
-}
-
-
-#pragma mark - Properties
-
-- (void)setLocale:(NSLocale *)locale {
-    _locale = locale;
-    VENCalculatorInputView *inputView = (VENCalculatorInputView *)self.inputView;
-    inputView.locale = locale;
-    self.moneyCalculator.locale = locale;
 }
 
 
@@ -118,7 +104,7 @@
 }
 
 - (NSString *)decimalSeparator {
-    return [self.locale objectForKey:NSLocaleDecimalSeparator];
+    return [NSNumberFormatter new].decimalSeparator;
 }
 
 @end
